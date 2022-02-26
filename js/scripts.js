@@ -48,6 +48,10 @@ Menu.prototype.displayToppings = function() {
     if(order1.topping[i] === "pepperoni") {
       this.total += 2.99;
     }
+
+    if(order1.topping[i] === "anchovies") {
+      this.total += 3.99;
+    }
   }
   // console.log(order1.total);
   return order1.total;
@@ -82,6 +86,7 @@ $(document).ready(function(){
     order1.size = document.getElementById("size").value;
     order1.topping[0] = document.getElementById("topping1").value;
     order1.topping[1] = document.getElementById("topping2").value;
+    order1.topping[2] = document.getElementById("topping3").value;
     const total = order1.displayToppings();
     console.log(order1.size);
     console.log(order1.topping);
