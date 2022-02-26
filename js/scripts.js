@@ -52,6 +52,10 @@ Menu.prototype.displayToppings = function() {
     if(order1.topping[i] === "anchovies") {
       this.total += 3.99;
     }
+
+    if(order1.topping[i] === "pineapple") {
+      this.total += 4.99;
+    }
   }
   // console.log(order1.total);
   return order1.total;
@@ -87,11 +91,15 @@ $(document).ready(function(){
     order1.topping[0] = document.getElementById("topping1").value;
     order1.topping[1] = document.getElementById("topping2").value;
     order1.topping[2] = document.getElementById("topping3").value;
+    order1.topping[3] = document.getElementById("topping4").value;
     const total = order1.displayToppings();
     console.log(order1.size);
     console.log(order1.topping);
     console.log(order1);
     console.log("Your total is $" + total);
     $("#total").text("Your total is $" + total);
+  });
+  $('#refresh').click(function() {
+    location.reload();
   });
 });

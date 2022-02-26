@@ -8,15 +8,18 @@
   <script src="js/scripts.js"></script>
 </head>
 <body>
+  <h1>WELCOME TO YOUR LOCAL PIZZA PARLOR</h1>
+  <h2>Please select from the following options to order your pizza.</h2>
+
         <!-- Topping -->
         <form id="menu">
           
           <div class="form-group">
             <label for="size">Please Select a size</label>
             <select class="form-control" id="size" type="text">
-              <option value="small">small</option>
-              <option value="medium">medium</option>
-              <option value="large">large</option>
+              <option value="small">small - $3.00</option>
+              <option value="medium">medium - $4.00</option>
+              <option value="large">large - $5.00</option>
             </select>
           </div>
 
@@ -26,27 +29,35 @@
 
 
         <div class="form-group">
-          <label for="topping1">Please Select a topping</label>
+          <label for="topping1">Please Select your toppings:</label>
           <select class="form-control" id="topping1" type="text">
-            <option value="cheese">cheese</option>
+            <option value="cheese">cheese - $1.99</option>
             <option value="none">none</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="topping2">Please Select a topping</label>
+          <!-- <label for="topping2">Please Select a topping</label> -->
           <select class="form-control" id="topping2" type="text">
-            <option value="pepperoni">pepperoni</option>
+            <option value="pepperoni">pepperoni - $2.99</option>
             <option value="none">none</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="topping3">Please Select a topping</label>
+          <!-- <label for="topping3">Please Select a topping</label> -->
           <select class="form-control" id="topping3" type="text">
-            <option value="anchovies">anchovies</option>
+            <option value="anchovies">anchovies - $3.99</option>
+            <option value="none">none</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <!-- <label for="topping4">Please Select a topping</label> -->
+          <select class="form-control" id="topping4" type="text">
+            <option value="pineapple">pineapple - $4.99</option>
             <option value="none">none</option>
           </select>
         </div>
         <button type="submit" class="btn">Enter Order</button>
+        <p id="resetButton"><button type="button" class="btn btn" id="refresh">Restart Order</button></p>
       </form>
       
       <p><span id="total"></span></p>
