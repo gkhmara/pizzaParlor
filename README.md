@@ -42,7 +42,7 @@ This site allows a user to select from different sizes of pizza and toppings and
 - Expected Output: this.total = 1;
 ---
 ---
-#### Describe: emptyArray()
+#### Describe: clearTotal()
 
 - Test: It will return the object's total to zero to allow the user to input a new order.
 
