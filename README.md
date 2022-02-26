@@ -25,7 +25,7 @@ This site allows a user to select from different sizes of pizza and toppings and
 
 #### Describe: totalOrder()
 
-- Test: "It will add a number to the this.total based on selection from the user."
+- Test: "It will add a number to the the object based on selection from the user."
 
 - Code:   if(order1.size === "small") {
     this.total += 3.00;
@@ -33,13 +33,14 @@ This site allows a user to select from different sizes of pizza and toppings and
 
 - Expected Output: this.total = 3;
 ---
-- Test: "It will add a number to the this.total based on selection from the user."
+- Test: "It will add a number to the object based on selection from the user."
 
 - Code: if(order1.topping[i] === "cheese") {
       this.total += 1.00;
     }
 
 - Expected Output: this.total = 1;
+---
 ---
 #### Describe: emptyArray()
 
