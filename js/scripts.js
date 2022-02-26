@@ -93,10 +93,10 @@ $(document).ready(function(){
     order1.topping[2] = document.getElementById("topping3").value;
     order1.topping[3] = document.getElementById("topping4").value;
     const total = order1.displayToppings();
-    console.log(order1.size);
-    console.log(order1.topping);
-    console.log(order1);
-    console.log("Your total is $" + total + ".00");
+    // console.log(order1.size);
+    // console.log(order1.topping);
+    // console.log(order1);
+    // console.log("Your total is $" + total + ".00");
     $("#total").text("Your total is $" + total + ".00");
   });
   $('#refresh').click(function() {
