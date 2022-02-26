@@ -6,17 +6,17 @@ function Menu(size, topping= []) {
 }
 
 //USER INPUT
-let sizeTest = ["medium"];
-let toppingTest = ["pepperoni", "cheese"];
+// let sizeTest = ["medium"];
+// let toppingTest = ["pepperoni", "cheese"];
 
 //prototype method
-Menu.prototype.fullOrder = function() {
-  return this.size + " " + this.topping[0];
-}
+// Menu.prototype.fullOrder = function() {
+//   return this.size + " " + this.topping[0];
+// }
 
 //new objects
 let order1 = new Menu();
-let order2 = new Menu();
+// let order2 = new Menu();
 
 //console.log
 console.log(order1);
