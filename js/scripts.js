@@ -6,7 +6,7 @@ function Menu(size, topping= []) {
 
 let order1 = new Menu();
 
-Menu.prototype.displayToppings = function() {
+Menu.prototype.totalOrder = function() {
   
   if(order1.size === "small") {
     this.total += 3.00;
@@ -49,7 +49,7 @@ $(document).ready(function(){
     order1.topping[1] = document.getElementById("topping2").value;
     order1.topping[2] = document.getElementById("topping3").value;
     order1.topping[3] = document.getElementById("topping4").value;
-    const total = order1.displayToppings();
+    const total = order1.totalOrder();
     $("#total").text("Your total is $" + total + ".00");
     console.log(order1);
     order1.emptyArray();
