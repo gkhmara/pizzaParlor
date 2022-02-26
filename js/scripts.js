@@ -37,7 +37,7 @@ Menu.prototype.totalOrder = function() {
   return order1.total;
 }
 
-Menu.prototype.emptyArray = function() {
+Menu.prototype.clearTotal = function() {
   this.total = 0;
 }
 
@@ -52,6 +52,6 @@ $(document).ready(function(){
     const total = order1.totalOrder();
     $("#total").text("Your total is $" + total + ".00");
     console.log(order1);
-    order1.emptyArray();
+    order1.clearTotal();
   });
 });

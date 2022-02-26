@@ -23,31 +23,31 @@ This site allows a user to select from different sizes of pizza and toppings and
 
 ## Tests:
 
-#### Describe: createArray()
+#### Describe: totalOrder()
 
-- Test: "It will return an array of numbers using the user's input as a stopping point."
+- Test: "It will add a number to the this.total based on selection from the user."
 
-- Code: num = "10"; createArray();
+- Code:   if(order1.size === "small") {
+    this.total += 3.00;
+  }
 
-- Expected Output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+- Expected Output: this.total = 3;
 ---
-- Test: "It will convert i to string and check to see if i is equal to string "3". If true it will push string "Wont' you be my neighbor?" to userArray.
-- Code:
-if (i.toString().includes("3")) {
-        userArray.push("Won't you be my neighbor?");
-- Expected Output: [0, 1, 2, "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, 10]
+- Test: "It will add a number to the this.total based on selection from the user."
+
+- Code: if(order1.topping[i] === "cheese") {
+      this.total += 1.00;
+    }
+
+- Expected Output: this.total = 1;
 ---
-- Test: "It will convert i to string and check to see if i is equal to string "2". If true it will push string "Beep!" to userArray.
-- Code:
-if (i.toString().includes("2")) {
-        userArray.push("Beep");
-- Expected Output: [0, 1, "Beep!", 3, 4, 5, 6, 7, 8, 9, 10]
----
-- Test: "It will convert i to string and check to see if i is equal to string "1". If true it will push string "Boop!" to userArray.
-- Code:
-if (i.toString().includes("1")) {
-        userArray.push("Boop");
-- Expected Output: [0, Boop, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+#### Describe: emptyArray()
+
+- Test: It will return the object's total to zero to allow the user to input a new order.
+
+- Code: this.total = 0;
+
+- Expected Output: this.total = 0;
 ---
 ---
 
@@ -59,7 +59,7 @@ if (i.toString().includes("1")) {
 
 MIT License
 
-Copyright (c) 02-13-22 Greg Khmara  
+Copyright (c) 02-26-22 Greg Khmara  
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
