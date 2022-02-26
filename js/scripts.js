@@ -37,6 +37,10 @@ Menu.prototype.displayToppings = function() {
   return order1.total;
 }
 
+Menu.prototype.emptyArray = function() {
+  this.total = 0;
+}
+
 $(document).ready(function(){
   $("#menu").submit(function(event){
     event.preventDefault();
@@ -48,8 +52,6 @@ $(document).ready(function(){
     const total = order1.displayToppings();
     $("#total").text("Your total is $" + total + ".00");
     console.log(order1);
-  });
-  $('#refresh').click(function() {
-    location.reload();
+    order1.emptyArray();
   });
 });
