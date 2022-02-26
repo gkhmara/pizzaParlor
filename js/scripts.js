@@ -42,19 +42,19 @@ Menu.prototype.displayToppings = function() {
   for(let i = 0; i < order1.topping.length; i++) {
 
     if(order1.topping[i] === "cheese") {
-      this.total += 1.99;
+      this.total += 1.00;
     }
 
     if(order1.topping[i] === "pepperoni") {
-      this.total += 2.99;
+      this.total += 2.00;
     }
 
     if(order1.topping[i] === "anchovies") {
-      this.total += 3.99;
+      this.total += 3.00;
     }
 
     if(order1.topping[i] === "pineapple") {
-      this.total += 4.99;
+      this.total += 4.00;
     }
   }
   // console.log(order1.total);
@@ -96,8 +96,8 @@ $(document).ready(function(){
     console.log(order1.size);
     console.log(order1.topping);
     console.log(order1);
-    console.log("Your total is $" + total);
-    $("#total").text("Your total is $" + total);
+    console.log("Your total is $" + total + ".00");
+    $("#total").text("Your total is $" + total + ".00");
   });
   $('#refresh').click(function() {
     location.reload();
