@@ -1,7 +1,7 @@
 //constructor
-function Menu(size, topping) {
+function Menu(size, topping= []) {
   this.size = size;
-  this.topping = topping;
+  this.topping = topping= [];
   this.total = 0;
 }
 
@@ -15,8 +15,11 @@ Menu.prototype.fullOrder = function() {
 }
 
 //new objects
-let order1 = new Menu(["small", "medium", "large"], ["cheese", "pepperoni", "anchovies", "pineapple"]);
+let order1 = new Menu();
 let order2 = new Menu();
+
+//console.log
+console.log(order1);
 
 // for (const key in order1) {
 //   if(order1.hasOwnProperty(key)) {
@@ -25,17 +28,24 @@ let order2 = new Menu();
 // }
 
 Menu.prototype.displayToppings = function() {
+  
+  if(order1.size === "small") {
+    this.total += 3.00;
+  } else if (order1.size === "medium") {
+    this.total += 4.00;
+  } else if (order1.size === "large") {
+    this.total += 5.00;
+  }
+  
+  
+  
   for(let i = 0; i < order1.topping.length; i++) {
 
-    if(sizeTest[i] === order1.size[i]) {
-      this.total += 3.00
-    }
-
-    if(toppingTest[i] === "cheese") {
+    if(order1.topping[i] === "cheese") {
       this.total += 1.99;
     }
 
-    if(toppingTest[i] === "pepperoni") {
+    if(order1.topping[i] === "pepperoni") {
       this.total += 2.99;
     }
   }
@@ -43,8 +53,8 @@ Menu.prototype.displayToppings = function() {
 }
 
 
-console.log(order1.displayToppings());
-console.log("Your total is $" + order1.total);
+// console.log(order1.displayToppings());
+// console.log("Your total is $" + order1.total);
 
 //prototype method
 // Menu.prototype.customerOrder = function () {
@@ -65,13 +75,15 @@ console.log("Your total is $" + order1.total);
 // order1.customerOrder();
 // console.log(order1);
 
-$(document).click(function(){
+$(document).ready(function(){
   $("#menu").submit(function(event){
     event.preventDefault();
-    // let topping = [];
-    order2.topping = document.getElementById("topping1").value;
-    const secondTopping = document.getElementById("topping2").value;
-    console.log(order2.topping);
-    console.log(secondTopping);
+    order1.size = document.getElementById("size").value;
+    order1.topping[0] = document.getElementById("topping1").value;
+    order1.topping[1] = document.getElementById("topping2").value;
+    console.log(order1.size);
+    console.log(order1.topping);
+    console.log(order1);
+    console.log(order1.displayToppings());
   });
 });
