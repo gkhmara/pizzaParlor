@@ -1,18 +1,24 @@
 .pizza {
   border-radius: 50%;
   margin: auto;
-  width: 50%;
+  width: 30%;
   height: auto;
   display: block;
   clear: both;
 }
 
 .heading {
-  padding: 30px;
+  padding: 35px;
   display: block;
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 25%;
+  width: 45%;
   box-sizing: content-box;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
