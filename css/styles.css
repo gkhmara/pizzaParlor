@@ -14,5 +14,5 @@
   margin-top: 20px;
   margin-bottom: 20px;
   width: 25%;
-  /* box-sizing: border-box; */
+  box-sizing: content-box;
 }
